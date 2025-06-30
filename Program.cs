@@ -4,11 +4,17 @@
     {
         static void Main(string[] args)
         {
+            string? input; 
             Console.WriteLine("Hello, World!");
-            if (Console.ReadKey().ToString() == "a")
+
+            input = Console.ReadKey().KeyChar.ToString();
+            if (input == "a")
             {
-                Console.Beep();
-                Console.WriteLine("awa meow purr");
+                Console.WriteLine("awa meow puhrr");
+            }
+            else
+            {
+                Console.WriteLine(input);
             }
         }
     }
