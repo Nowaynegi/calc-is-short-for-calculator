@@ -4,17 +4,16 @@
     {
         static void Main(string[] args)
         {
-            string? input; 
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("hihi welcome to papicalc pwease typesies in ur equation!!");
+            Console.Write("oh! and ");
 
-            input = Console.ReadKey().KeyChar.ToString();
-            if (input == "a")
+            while (true)
             {
-                Console.WriteLine("awa meow puhrr");
-            }
-            else
-            {
-                Console.WriteLine(input);
+                Console.WriteLine("you can always type 'exit' to exit!! <333");
+                string? input = Console.ReadLine();
+
+                if (input.ToLower() == "exit") { Console.WriteLine("okie see you later cutie!!!! >~< ^^"); break; }
+
             }
         }
     }
