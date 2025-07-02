@@ -6,10 +6,11 @@
         {
             Console.WriteLine("hihi welcome to papicalc pwease typesies in ur equation!!");
             Console.Write("oh! and ");
+            Console.WriteLine("you can always type 'exit' to exit!! <333");
 
             while (true)
             {
-                Console.WriteLine("you can always type 'exit' to exit!! <333");
+                
                 string? input = Console.ReadLine();
 
                 if (input.ToLower() == "exit")  // starting with the possible errors greatly helps simplify and shrink things! not to mention performance <3
@@ -43,9 +44,9 @@
                     Console.WriteLine($"okie here's the answer!: {result}");
 
                 }
-                catch (DivideByZeroException)
+                catch (DivideByZeroException ex)
                 {
-                    Console.WriteLine();
+                    Console.WriteLine(ex.Message);
                 }
                 catch (FormatException)
                 {
@@ -70,7 +71,7 @@
                 case "/":
                     if (operand2 == 0)
                     {
-                        throw new DivideByZeroException("hey silly >~< don't divide by zeroo~ i dont know that one..");
+                        throw new DivideByZeroException("hey silly >~< don't divide by zeroo~ i dont know that one.."); // a message??!
                     }
                     return operand1 / operand2;
                 default:
